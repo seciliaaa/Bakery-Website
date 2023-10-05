@@ -1,0 +1,649 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&family=Quicksand:wght@500;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: auto;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    max-width: 1200px;
+    width: 100%;
+    height: 18vh;
+} 
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    background-color: white;
+    margin-inline: auto;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+header nav .logo img {
+    width: 100px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 25px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: rgb(209, 115, 115);
+    font-weight: 400;
+    font-size: 18px;
+}
+
+header nav ul li a:hover {
+    font-weight: bold;
+    font-size: 17px;
+    color: rgb(112, 79, 79);
+}
+
+main {
+    max-width: 1200px;
+    width: 100%;
+    margin-inline: auto;
+    padding: 2rem 4rem;
+    align-items: center;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.home_text {
+    flex: 1 1;
+}
+
+.home_text h1 {
+    font-size: 2rem;
+    margin-block: 1rem;
+}
+
+.home_text h1 span {
+    margin-left: 45px;
+    color: rgb(209, 115, 115);
+    line-height: 22px;
+    font-size: 70px;
+}
+
+.home_image{
+    flex: 1;
+    width: 100%;
+    display: flex;
+}
+
+.home_image img {
+    margin: auto;
+    min-width: 250px;
+    width: 450px;
+}
+
+.home_text p{
+    font-size: 15px;
+}
+
+.home_text p span {
+    font-size: 20px;
+    color: rgb(209, 115, 115);
+    font-weight: bold;
+}
+
+.home_text button{
+    margin-block-start: 1rem;
+    background-color:rgb(112, 79, 79);
+    color: white;
+    text-decoration: none;
+    border: 3px solid transparent;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    padding: 8px 20px;
+    border-radius: 50px;
+    transition: .4s; 
+}
+
+.home_text button:hover{
+    background-color: transparent;
+    color: rgb(112, 79, 79);
+    border: 3px solid rgb(112, 79, 79);
+    cursor: pointer;
+}
+
+
+/*ABOUT*/
+main .about {
+    background-color: rgb(209, 115, 115);
+    padding: 2rem;
+    text-align: center;
+    margin: 5rem 0 5rem 0;
+}
+
+main .about .about_text h1{
+    color:white;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+main .about .about_text p{
+    color:white;
+    font-size: 1rem;
+}
+
+main .aboutcard {
+    display: flex;
+    flex: 1 1 1;
+}
+
+.aboutcard_text{
+    text-align: center;
+}
+.aboutcard_text h1{
+    font-size: 2opx;
+    color: rgb(112, 79, 79);
+}
+
+.aboutcard_text img{
+    width: 100px;
+}
+
+.aboutcard_text p{
+    font-size: 15px;
+    color: rgb(112, 79, 79);
+}
+
+
+/*PRODUCT*/
+.product{
+    width: 100%;
+    padding: 70px 0;
+}
+
+.product h1{
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.product h1 span{
+    color: rgb(209, 115, 115);
+    margin-left: 15px;
+    font-size: 4rem;
+    line-height: 22px;
+}
+
+.product .product_box{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 13%;
+}
+
+.product .product_box .produk{
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    transition: 0.4s;
+}
+
+.product .product_box .produk:hover{
+    border-radius: 20px;
+    height: 320px;
+}
+
+.product .product_box .produk img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    z-index: 2;
+    transition: 0.4s;
+}
+
+.product .product_box .produk:hover img{
+    border-radius: 20px;
+    margin-top: -230px;
+}
+
+.product .product_box .produk .info{
+    position: absolute;
+    text-align: center;
+    top: 25%;
+    transition: 0.4s;
+}
+
+.product .product_box .produk:hover .info{
+    top: 60%;
+}
+
+.product .product_box .produk .info .nama{
+    color: rgb(209, 115, 115);
+    margin-bottom: 10px;
+}
+
+.product .product_box .produk .info .deskripsi{
+    width: 70%;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    font-size: 15px;
+}
+
+
+/*GALLERY*/
+.gallary{
+    width: 100%;
+    padding: 70px 0;
+}
+
+.gallary h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+.gallary h1 span{
+    font-size: 4rem;
+    color: rgb(209, 115, 115);
+    line-height: 22px;
+    margin-left: 15px;
+}
+
+.gallary .gallary_img_card{
+    width: 95%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+
+.gallary .gallary_img_card .gallary_img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+}
+
+.gallary .gallary_img_card .gallary_img img{
+    width: 100%;
+    transition: .3s;
+}
+
+.gallary .gallary_img_card .gallary_img:hover img{
+    opacity: 0.4;
+}
+
+.gallary .gallary_img_card .gallary_img h3{
+    position: absolute;
+    font-size: 24px;
+    margin-bottom: 100px;
+    color: rgb(209, 115, 115);
+    font-family: polo;
+    z-index: 5;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.gallary .gallary_img_card .gallary_img:hover h3{
+    opacity: 1;
+}
+
+.gallary .gallary_img_card .gallary_img p{
+    position: absolute;
+    width: 250px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 10px;
+    color: white;
+    line-height: 22px;
+    opacity: 0;
+    z-index: 5;
+    transition: 0.3s;
+}
+
+.gallary .gallary_img_card .gallary_img:hover p{
+    opacity: 1;
+}
+
+.gallary .gallary_img_card .gallary_img .gallary_btn{
+    position: absolute;
+    margin-top: 100px;
+    color: white;
+    background: rgb(112, 79, 79);
+    padding: 7px 25px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    opacity: 0;
+    border-radius: 50px;
+    transform: translateY(45px);
+    z-index: 5;
+    transition: 0.3s;
+}
+
+.gallary .gallary_img_card .gallary_img:hover .gallary_btn{
+    opacity: 1;
+    transform: translateY(0);
+    cursor: pointer;
+}
+
+
+/*ASIDE*/
+.aside {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.card {
+    width: 90%;
+    max-width: 500px;
+
+    text-align: center;
+    padding: 40px 35px;
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card img{
+    width: 50%;
+    border-radius: 50%;
+}
+
+.card h2{
+    font-size: 25px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+.card p {
+    font-size: 15px;
+    margin: 10px auto;
+    max-width: 350px;
+}
+
+.card .link img{
+    width: 40px;
+    border-radius: 50%;
+    margin: 10px 5px;
+}
+
+.button {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    background: rgb(112, 79, 79);
+    color: white;
+    padding: 10px 30px;
+    border: 3px solid transparent;
+    border-radius: 30px;
+    margin: 30px 0 10px;
+}
+.button:hover{
+    background-color: transparent;
+    color: rgb(112, 79, 79);
+    border: 3px solid rgb(112, 79, 79);
+}
+
+/*Footer*/
+
+footer{
+    width: 100%;
+    padding: 30px 0 0 20px;
+    background: rgb(209, 115, 115);
+}
+
+footer .footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+footer .footer .footer_desc{
+    text-align: center;
+}
+
+footer .footer .footer_desc h2{
+    color: white;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+footer .footer .footer_desc p{
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+footer .footer .footer_desc p:hover{
+    margin-left: 10px;
+}
+
+footer .end{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+footer .end span{
+    color: white;
+    margin-left: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+    }
+
+    header nav ul {
+        flex-wrap: wrap;
+        column-gap: .5rem;
+    }
+
+    main {
+        padding: 1rem 3rem;
+        width: 100%;
+      }
+
+    .content{
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .home_text h1 {
+        font-size: 2rem;
+    }
+
+    .home_text p {
+        font-size: 1rem;
+    }
+
+    .home_image{
+        order: -1;
+    }
+
+    main .about {
+        padding: 1rem;
+        margin: 2rem 0 2rem 0;
+    }
+
+    main .about .about_text h1 {
+        font-size: 2rem;
+    }
+
+    main .about .about_text p {
+        font-size: 0.8rem;
+    }
+
+    .aboutcard {
+        flex-direction: column;
+        margin-bottom: 15px;
+        align-items: center;
+    }
+
+    .aboutcard_text h1 {
+        font-size: 18px;
+    }
+
+    .aboutcard_text img {
+        width: 80px;
+    }
+
+    .product h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .product h1 span {
+        font-size: 3rem;
+    }
+
+    .product .product_box {
+        top: 10%;
+        flex-wrap: wrap;
+    }
+
+    .product .product_box .produk {
+        width: 150px;
+        height: 150px;
+    }
+
+    .product .product_box .produk img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .product .product_box .produk:hover img{
+        margin-top: -100px;
+    }    
+
+    .product .product_box .produk .info {
+        top: 20%;
+    }
+
+    .product .product_box .produk .info .nama{
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+
+    .product .product_box .produk .info .deskripsi {
+        width: 90%;
+        font-size: 10px;
+    }
+
+    .gallary h1 {
+        font-size: 2rem;
+    }
+
+    .gallary h1 span {
+        font-size: 3rem;
+    }
+
+    .gallary .gallary_img_card {
+        grid-template-columns: 1fr; 
+        grid-gap: 5px;
+    }
+
+    .gallary .gallary_img_card .gallary_img h3 {
+        font-size: 18px;
+        margin-bottom: 80px;
+    }
+
+    .gallary .gallary_img_card .gallary_img p {
+        width: 150px;
+        font-size: 10px;
+        line-height: 16px;
+        margin-top: 5px;
+    }
+
+    .gallary .gallary_img_card .gallary_img .gallary_btn {
+        margin-top: 60px;
+    }
+
+    .aside {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 90%;
+        margin: 20px auto;
+    }
+
+    .card img {
+        width: 60%;
+    }
+
+    .card h2 {
+        font-size: 20px;
+        margin-top: 15px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+
+    .button {
+        font-size: 16px;
+    }
+
+    footer .footer {
+        grid-template-columns: 1fr;
+    }
+
+    footer .footer_desc h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    footer .footer_desc p {
+        margin-left: 0;
+    }
+
+    footer .end {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
